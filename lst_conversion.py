@@ -17,7 +17,7 @@ def create_dir(origin, landsat):
     os.makedirs(dir)
 
 def calc_lst(origin, landsat):
-    source = origin + "\\landsat" + "\\"+ landsat
+    source = origin + "\\landsat" + "\\" + landsat
     output = origin + "\\output"
 
     # File locations
@@ -87,5 +87,5 @@ if __name__ == "__main__":
     origin = "C:\\Users\\barry\\Desktop\\ggr462\\Green-Roof"
     dirs = get_files(origin + "\\landsat")
     for folder in dirs:
-        # create_dir(origin + "\\output", folder) # creat out put folders
+        create_dir(origin + "\\output", folder) # creat out put folders
         calc_lst(origin, folder)
